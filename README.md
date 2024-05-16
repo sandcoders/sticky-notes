@@ -18,7 +18,7 @@ To install and run the Sticky Notes app locally, follow these steps:
 
 1. Clone the repository (or download the files):
     ```sh
-    git clone https://github.com/Sandcoders/sticky-notes.git
+    git clone https://github.com/sandcoders/sticky-notes.git
     ```
     
 2. Install dependencies: Make sure you have Python and pip installed, then run:
@@ -28,7 +28,7 @@ To install and run the Sticky Notes app locally, follow these steps:
 
 3. Navigate into the project directory that includes the manage.py file.
 
-4. To utilise Django's admin functionalities for creating and managing notes, you'll need to create a superuser:
+4. To utilise Django's admin functionalities, you'll need to create a superuser:
     ```sh
     python manage.py createsuperuser
     ```
@@ -46,9 +46,9 @@ To use the Sticky Notes app:
 
 2. Log in with the credentials you created during the superuser setup.
 
-3. Once logged in, click on "View site" in ther menu bar.
+3. Once logged in, click on "View site" in the admin menu bar.
 
-4. Click on "+ Create a Note" in the menu bar to start creating and managing your sticky notes.
+4. Click on "+ Create a Note" in the site menu bar to start creating and managing your sticky notes.
 
 5. The app has full user authentication, so you could navigate to the front end at http://localhost:8000/ and log in there instead.
 
@@ -64,7 +64,7 @@ Here is a screenshot of the Sticky Notes noteboard:
 
 This project is developed and maintained by:
 
-- [Sandcoders](https://github.com/Sandcoders)
+- [Sandcoders](https://github.com/sandcoders)
 
 ## License
 
