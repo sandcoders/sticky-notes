@@ -1,0 +1,37 @@
+<!-- notes/templates/notes/note_read.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Sticky Notes - {{ note.title }}{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<!-- Sticky Note Content -->
+		<div class="read-header">
+			<h2>Read Note</h2>		
+		</div>	
+		<div class="read-title">
+			<h3>Title:</h3>
+			<p>{{ note.title }}</p>
+		</div>		
+		<div class="read-content">
+			<h3>Content:</h3>
+			<p>{{ note.content }}</p>
+		</div>
+
+		<!-- Update & Delete buttons -->	
+		<div class="read-buttons">
+			<a id="noteUpdateLink" href="{% url 'note_update' pk=note.pk %}" class="btn btn-primary" role="button"
+   			aria-label="Update note">Update</a>			
+			<form action="{% url 'note_delete' pk=note.pk %}" method="post">
+			    {% csrf_token %}
+			    <button type="submit" class="btn btn-danger" aria-label="Delete note">Delete</button>
+			</form>			
+		</div>
+		
+		<!-- Back to Noteboard link -->
+		<div class="back-link">
+			<a href="{% url 'note_noteboard' %} " aria-label="Return to Noteboard">&lt;&lt; Back to Noteboard</a>
+		</div>
+	</div>
+{% endblock %}

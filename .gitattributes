@@ -1,0 +1,18 @@
+# Auto-detect text files and normalize to LF
+* text=auto
+
+# Explicitly set text files to use Unix-style LF
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Explicitly set text files to use Windows-style CRLF
+*.bat text eol=crlf
+
+# Binary files should never be normalized
+*.png binary
+*.jpg binary
+*.zip binary
+*.exe binary

@@ -1,0 +1,369 @@
+/* notes/static/notes/css/styles.css */
+
+/*!
+* Author: John Nuttall
+* Description: CSS styles for the Sticky Notes app
+*/
+
+/* Local Google fonts */
+/* caveat-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/caveat/caveat-v18-latin-regular.woff2') format('woff2'),
+       url('fonts/caveat/caveat-v18-latin-regular.ttf') format('truetype'); 
+}
+
+/* caveat-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/caveat/caveat-v18-latin-500.woff2') format('woff2'), 
+       url('fonts/caveat/caveat-v18-latin-500.ttf') format('truetype');
+}
+
+/* caveat-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/caveat/caveat-v18-latin-600.woff2') format('woff2'), 
+       url('fonts/caveat/caveat-v18-latin-600.ttf') format('truetype');
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/poppins/poppins-v21-latin-regular.woff2') format('woff2'), 
+       url('fonts/poppins/poppins-v21-latin-regular.ttf') format('truetype'); 
+}
+
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/poppins/poppins-v21-latin-500.woff2') format('woff2'), 
+       url('fonts/poppins/poppins-v21-latin-500.ttf') format('truetype');
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/poppins/poppins-v21-latin-600.woff2') format('woff2'), 
+       url('fonts/poppins/poppins-v21-latin-600.ttf') format('truetype'); 
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Layout */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto 20px;
+  background: #e0e0e0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins';
+}
+
+main {
+  flex: 1;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+p {
+  font-size: 17px;
+}
+
+/* Nav bar styling */
+.navbar-brand {
+  font-family: 'Caveat';
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff740;
+}
+
+.navbar a:hover {
+  color: #fff740;
+}
+
+.nav-link {
+  color: #cdfc93;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.navbar-nav a:hover {
+  color: #7afcff;
+}
+
+.logout-button {
+    border: none; 
+    background: none; 
+    padding: 8px;
+    color: #fff;    
+}
+
+.logout-button:hover {
+    color: #7afcff;
+}
+
+/* Login page styling */
+.login-boxes {
+  margin-bottom: 15px;    
+}
+
+.login-boxes label {
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.alert-danger {
+  max-width:400px;
+}
+
+.login-button {
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+.login-error {
+  margin-top: 25px;    
+}
+
+/* Signup page styling */
+.signup-boxes {
+  margin-bottom: 15px;    
+}
+
+.signup-boxes label {
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.signup-button {
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+.signup-error {
+  margin-top: 25px;
+}
+
+/* List styling for the sticky notes */
+ul {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+ul li {
+  margin: 35px;
+  position: relative;
+}
+
+ul li h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 3px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+ul li p {
+  font-family: 'Caveat';
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Sticky note full-note div styling */
+.full-note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li .full-note {
+  text-decoration: none;
+  background: #feff9c;
+  display: block;
+  height: 230px;
+  width: 230px;
+  padding: 16px;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  transition: transform .15s linear;
+  transform: rotate(-5deg);
+}
+
+ul li:nth-child(even) .full-note {
+  transform: rotate(3deg);
+  top: 5px;
+  background: #7afcff;
+}
+
+ul li:nth-child(3n) .full-note {
+  transform: rotate(-2deg);
+  top: -5px;
+  background: #cdfc93;
+}
+
+ul li:nth-child(5n) .full-note {
+  transform: rotate(4deg);
+  top: -10px;
+  background: #dbdbff;
+}
+
+ul li .full-note:hover,
+ul li .full-note:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+  transform: scale(1.25);
+  z-index: 5;
+}
+
+/* Sticky note text & icons positioning*/
+.note-pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.note-title {
+  height: auto;
+  max-height: 80px;
+}
+
+.note-content {
+  flex-grow: 1;  
+}
+
+.note-icons {  
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px 1px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.note-icons .delete-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0D6EFD;
+}
+
+/* Form for note creation & updating */
+.form-header h2 {
+  margin-top: 20px;
+}
+
+.form-control {
+  max-width: 400px;
+}
+
+.form-content {
+  max-height: 200px;
+}
+
+.form-boxes label {
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.form-button {
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+.back-link {
+  margin-top: 25px;
+}
+
+/* Page for reading a note */
+.read-header h2 {
+  margin: 20px 0 23px 0;
+}
+
+.read-title,
+.read-content {
+  max-width: 400px;
+}
+
+.read-buttons {
+  margin-top: 25px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Footer properties */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-info {
+  font-family: 'Caveat';  
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}

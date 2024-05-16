@@ -1,0 +1,35 @@
+<!-- notes/templates/notes/note_form.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Sticky Notes - {% if form.instance.pk %}Update{% else %}Create{% endif %} Note{% endblock %}
+
+{% block content %}
+	<div class="container">
+	    <!-- Form header -->
+	    <div class="form-header">
+	        <h2>{% if form.instance.pk %}Update{% else %}Create{% endif %} Note</h2>
+	    </div>
+
+	    <!-- Form start -->
+	    <form method="post" action="
+	    	{% if form.instance.pk %}
+	    		{% url 'note_update' pk=form.instance.pk %}
+	    	{% else %}
+	    		{% url 'note_create' %}
+	    	{% endif %}" aria-label="Create or update note">
+	        {% csrf_token %}
+	        <div class="form-boxes">
+	            {{ form.as_p }}
+	        </div>
+	        <div class="form-button">
+	            <input class="btn btn-primary" type="submit" value="Save" aria-label="Save note">
+	        </div>
+	    </form>
+
+	    <!-- Back to Noteboard link -->
+	    <div class="back-link">
+	        <a href="{% url 'note_noteboard' %}" aria-label="Return to Noteboard">&lt;&lt; Back to Noteboard</a>
+	    </div>	    
+	</div>
+{% endblock %}

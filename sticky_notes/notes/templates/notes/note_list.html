@@ -1,0 +1,53 @@
+<!-- notes/templates/notes/note_list.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sticky Notes - Noteboard{% endblock %}
+
+{% block content %}
+	<!-- System messages -->
+	{% if messages %}
+		{% for message in messages %}
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong>{{ message }}</strong>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}	
+	{% endif %}
+
+	<!-- Unordered list for displaying the sticky notes -->
+	<ul>
+		{% for note in notes %}				
+			<li>
+				<div class="full-note">
+					<div class="note-pin">
+						<img src="{% static 'notes/img/pin.png' %}" alt="Sticky note pin">						
+					</div>
+					<div class="note-title">
+						<h2>{{ note.title }}</h2>
+					</div>
+					<div class="note-content">
+						<p>{{ note.content }}</p>										
+					</div>
+					<div class="note-icons">
+						<a href="{% url 'note_read' pk=note.pk %}" aria-label="Read Note">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</a>
+						<a href="{% url 'note_update' pk=note.pk %}" aria-label="Update Note">
+							<i class="fa-regular fa-pen-to-square"></i>
+						</a>						
+						<form action="{% url 'note_delete' pk=note.pk %}" method="post">
+						    {% csrf_token %}
+						    <button class="delete-button" type="submit" aria-label="Delete Note">
+						        <i class="fa-regular fa-trash-can"></i>
+						    </button>
+						</form>
+						</a>
+					</div>					
+				</div>			
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

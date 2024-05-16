@@ -1,0 +1,112 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.mo
+*.pyo
+*.pyd
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.build/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+.testrepository/
+*.egg
+.coverage.*
+
+# License file
+AUTHORS.rst
+
+# Translations
+*.mo
+
+# OS files
+.DS_Store
+*.DS_Store
+*.swp
+*.swo
+
+# Environments
+venv/
+env/
+ENV/
+*venv/
+*env/
+
+# Pyre type checker
+.pyre/
+.pyre_check/
+
+# mkdocs documentation
+/site/
+
+# mypy type checker
+.mypy_cache/
+.dmypy.json
+
+# pytype static type analyzer
+.pytype/
+
+# PyCharm
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# VS Code
+.vscode/
+
+# IDE specific files
+.*sublime*
+
+# Yarn & Node
+.yarn/
+.yarn-debug.log*
+.node
+node_modules/
+npm-debug.log
+
+# Coverage reports
+coverage.xml
+
+# Environments' management tool folders and files such as .tox and .pip
+.tox/
+.pip
+
+# System directories
+.DS_Store
+Thumbs.db
+
+# Deployment
+*.rkt
+
+# Project management
+.Python
+project_config.json
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# External build tools
+docs/_build/
+
+# Local History
+.localhistory/
+
+# Env files
+.env
+
+# VS Code
+.vscode/
