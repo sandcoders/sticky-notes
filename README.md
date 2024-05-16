@@ -58,7 +58,7 @@ To use the Sticky Notes app:
 
 Here is a screenshot of the Sticky Notes noteboard:
 
-![Sticky Notes Noteboard](sticky%20notes%20noteboard.png)
+![Sticky Notes Noteboard](sticky-notes-noteboard.png)
 
 ## Credits
 
