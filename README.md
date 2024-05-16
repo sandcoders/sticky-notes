@@ -52,7 +52,7 @@ To use the Sticky Notes app:
 
 5. The app has full user authentication, so you could navigate to the front end at http://localhost:8000/ and log in there instead.
 
-6. You can set up more users by following the "sign-up" link from the log in page.
+6. You can set up more users by following the "sign-up" link from the login page.
 
 ## Screenshots
 
